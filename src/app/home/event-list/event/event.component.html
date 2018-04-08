@@ -1,0 +1,14 @@
+<a  class="list-group-item clearfix">
+  <div class="pull-right">
+    <h4 class="list-group-item-heading">{{ event.name }}</h4>
+    <p class="list-group-item-text">{{ event.date | date : 'medium'}}</p>
+    <p class="list-group-item-text">{{ event.location }}</p>
+  </div>
+  <span class="pull-left">
+        <img
+          [src]="event.imgPath"
+          alt="{{ event.name }}"
+          class="img-responsive"
+          style="max-height: 100px;">
+      </span>
+</a>

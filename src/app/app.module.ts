@@ -13,9 +13,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { EventComponent } from './home/event/event.component';
-import { NewsComponent } from './home/news/news.component';
+import { EventListComponent } from './home/event-list/event-list.component';
+
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { NewsListComponent } from './home/news-list/news-list.component';
+import { EventComponent } from './home/event-list/event/event.component';
+import { NewsComponent } from './home/news-list/news/news.component';
 
 export const ROUTES: Routes = [
   {
@@ -34,9 +37,13 @@ export const ROUTES: Routes = [
     HeaderComponent,
     HomeComponent,
     AboutComponent,
+    EventListComponent,
     EventComponent,
+    NewsListComponent,
     NewsComponent,
-    CarouselComponent
+    CarouselComponent,
+    NewsListComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
