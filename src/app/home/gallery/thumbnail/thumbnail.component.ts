@@ -39,7 +39,7 @@ export class ThumbnailComponent implements OnInit, OnChanges {
       else {
         index = index + 1;
       }
-    }, 1000)
+    }, 3000)
 
   }
 

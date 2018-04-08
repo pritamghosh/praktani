@@ -10,10 +10,10 @@ import { Thumbnail } from '../../models/thumbnail.model';
 export class GalleryComponent implements OnInit {
   thumbnails: Thumbnail[] = [];
   t1 = new Thumbnail('thumb1', [
-    new Image('assets/images/smily1.png', 'smily 1', ' caption 1',100,100),
-    new Image('assets/images/smily2.png', 'smily 2', ' caption 2',100,100),
-    new Image('assets/images/smily3.jpg', 'smily 2', ' caption 3',100,100),
-    new Image('assets/images/smily4.jpg', 'smily 2', ' caption 4',100,100)
+    new Image('assets/images/gallery/thumb1/bridge.jpg', 'smily 1', ' caption 1',100,100),
+    new Image('assets/images/gallery/thumb1/coast.jpg', 'smily 2', ' caption 2',100,100),
+    new Image('assets/images/gallery/thumb1/park.jpg', 'smily 2', ' caption 3',100,100),
+    new Image('assets/images/gallery/thumb1/rails.jpg', 'smily 2', ' caption 4',100,100)
   ]);
   constructor() { }
 
@@ -22,26 +22,26 @@ export class GalleryComponent implements OnInit {
     this.thumbnails.push(this.t1);
     this.thumbnails.push(
       new Thumbnail('thumb2', [
-        new Image('assets/images/smily2.png', 'smily 2', ' caption 2'),
-        new Image('assets/images/smily1.png', 'smily 1', ' caption 1'),
-        new Image('assets/images/smily4.jpg', 'smily 4', ' caption 4'),
-        new Image('assets/images/smily3.jpg', 'smily 3', ' caption 3')
+        new Image('assets/images/gallery/thumb2/coast.jpg', 'smily 2', ' caption 2'),
+        new Image('assets/images/gallery/thumb2/bridge.jpg', 'smily 1', ' caption 1'),
+        new Image('assets/images/gallery/thumb2/tunnel.jpg', 'smily 4', ' caption 4'),
+        new Image('assets/images/gallery/thumb2/park.jpg', 'smily 3', ' caption 3')
       ])
     );
     this.thumbnails.push(
       new Thumbnail('thumb3', [
-        new Image('assets/images/smily3.jpg', 'smily 3', ' caption 3'),
-        new Image('assets/images/smily1.png', 'smily 1', ' caption 1'),
-        new Image('assets/images/smily4.jpg', 'smily 4', ' caption 4'),
-        new Image('assets/images/smily2.png', 'smily 2', ' caption 2'),
+        new Image('assets/images/gallery/thumb3/park.jpg', 'smily 3', ' caption 3'),
+        new Image('assets/images/gallery/thumb3/tunnel.jpg', 'smily 1', ' caption 1'),
+        new Image('assets/images/gallery/thumb3/rails.jpg', 'smily 4', ' caption 4'),
+        new Image('assets/images/gallery/thumb3/coast.jpg', 'smily 2', ' caption 2'),
       ])
     );
     this.thumbnails.push(
       new Thumbnail('thumb4', [
-        new Image('assets/images/smily3.jpg', 'smily 3', ' caption 3'),
-        new Image('assets/images/smily2.png', 'smily 2', ' caption 2'),
-        new Image('assets/images/smily1.png', 'smily 1', ' caption 1'),
-        new Image('assets/images/smily4.jpg', 'smily 4', ' caption 4')
+        new Image('assets/images/gallery/thumb4/tunnel.jpg', 'smily 3', ' caption 3'),
+        new Image('assets/images/gallery/thumb4/coast.jpg', 'smily 2', ' caption 2'),
+        new Image('assets/images/gallery/thumb4/bridge.jpg', 'smily 1', ' caption 1'),
+        new Image('assets/images/gallery/thumb4/rails.jpg', 'smily 4', ' caption 4')
       ])
     );
   }
