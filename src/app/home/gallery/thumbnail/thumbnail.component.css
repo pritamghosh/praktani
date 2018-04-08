@@ -1,0 +1,21 @@
+.thumbnail{
+    border-style: ridge;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 1px ridge rgb(81, 22, 192);
+    text-align: center;
+    display: block;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    
+}
+
+.thumbnail-img{
+    margin-top: 25;
+    margin-bottom: 25;
+    margin-right: 25;
+    margin-left: 25;
+}

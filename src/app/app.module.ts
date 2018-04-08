@@ -7,6 +7,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { NgxImageGalleryModule } from 'ngx-image-gallery';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 import { AppComponent } from './app.component';
@@ -19,6 +22,10 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { NewsListComponent } from './home/news-list/news-list.component';
 import { EventComponent } from './home/event-list/event/event.component';
 import { NewsComponent } from './home/news-list/news/news.component';
+import { GalleryComponent } from './home/gallery/gallery.component';
+import { ThumbnailComponent } from './home/gallery/thumbnail/thumbnail.component';
+import { ImageService } from './services/image.service';
+import { ViewerComponent } from './viewer/viewer.component';
 
 export const ROUTES: Routes = [
   {
@@ -43,7 +50,10 @@ export const ROUTES: Routes = [
     NewsComponent,
     CarouselComponent,
     NewsListComponent,
-    EventComponent
+    EventComponent,
+    GalleryComponent,
+    ThumbnailComponent,
+    ViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +64,14 @@ export const ROUTES: Routes = [
     BsDatepickerModule.forRoot(),
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(ROUTES), 
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    NgxImageGalleryModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ImageService],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ViewerComponent
+  ]
 })
 export class AppModule { }
