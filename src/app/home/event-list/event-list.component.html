@@ -1,11 +1,16 @@
 <div class="event-container">
 
-    <h1> Events</h1>
-<div class="row">
-  <div class="col-md-10">
-    <app-event class="list-group-item" *ngFor="let event of events" [event]="event">
-    </app-event>
+  <h1> Events</h1>
+  <div class="row ">
+    <div class="col-md-10 event-div">
+        <i class="fa fa-angle-up" style="font-size:60px;color:lightgray;" (click)="changeEvent(true)"></i>
 
+        <app-event [event]="event1">
+        </app-event>
+        <app-event  [event]="event2">
+        </app-event>
+        <i class="fa fa-angle-down" style="font-size:60px;color:lightgray;" (click)="changeEvent(false)"></i>
+
+    </div>
   </div>
-</div>
 </div>

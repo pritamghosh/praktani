@@ -86,7 +86,6 @@ export class ViewerComponent implements OnInit {
   private qualitySelectorShown: boolean = false
   private qualitySelected: string = 'auto'
   private categorySelected: string = 'preview_xxs'
-  private transform: number
   private Math: Math
 
   constructor(private ImageService: ImageService) {
@@ -100,8 +99,7 @@ export class ViewerComponent implements OnInit {
         this.images.forEach((image) => image.active = false)
         
         this.images[this.currentIdx].active = true;
-        this.transform = 0
-        //  this.updateQuality()
+        this.updateQuality()
       })
     ImageService.showImageViewerChanged$.subscribe(
       showViewer => {
@@ -199,7 +197,7 @@ export class ViewerComponent implements OnInit {
   }
 
   private navigate(direction: number, swipe: any) {
-
+    console.log(swipe)
     if ((direction === 1 && this.currentIdx < this.images.length - 1) ||
       (direction === -1 && this.currentIdx > 0)) {
 
@@ -230,7 +228,6 @@ export class ViewerComponent implements OnInit {
       this.images.forEach((image) => {
         if (image != this.images[this.currentIdx]) {
           image.active = false
-          this.transform = 0
         }
       })
     }, 500)
@@ -262,7 +259,7 @@ public get rightArrowActive(): boolean {
 }
 
 public pan(swipe: any) {
-    this.transform = swipe.deltaX
+   // this.transform = swipe.deltaX
 }
 
 public onResize() {

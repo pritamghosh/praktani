@@ -1,6 +1,6 @@
 <carousel class="text-center" [noPause]=false [interval]=2000 [noWrap]=false >
 		<slide *ngFor="let slide of slides; let index=index">
-			<img [attr.src]="slide.src" alt="image slide" style="display: block; height: 500px;align-items: center; " >
+			<img [src]="slide.src" alt="image slide"  >
 			
 			<div class="carousel-caption">
 				<h4>Slide {{index}}</h4>

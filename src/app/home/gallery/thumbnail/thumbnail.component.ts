@@ -29,7 +29,7 @@ export class ThumbnailComponent implements OnInit, OnChanges {
 
   public ngOnInit() {
     let index = 0;
-    this.currentImage = this.thumbnail.images.pop();
+    this.currentImage = this.thumbnail.images[0];
     setInterval(() => {
 
       this.currentImage = this.thumbnail.images[index];

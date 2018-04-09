@@ -4,11 +4,8 @@
     <div class="tz-gallery">
         <div class="row ">
             <div class="col-md-6 col-sm-6" *ngFor='let thumbnail of thumbnails'>
-                <a class="lightbox" >
                     <app-thumbnail [thumbnail]="thumbnail">
                     </app-thumbnail>
-                </a>
-
             </div>
         </div>
     </div>

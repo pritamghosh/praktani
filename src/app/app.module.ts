@@ -9,6 +9,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxImageGalleryModule } from 'ngx-image-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
 
 
 
@@ -26,6 +27,7 @@ import { GalleryComponent } from './home/gallery/gallery.component';
 import { ThumbnailComponent } from './home/gallery/thumbnail/thumbnail.component';
 import { ImageService } from './services/image.service';
 import { ViewerComponent } from './viewer/viewer.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const ROUTES: Routes = [
   {
@@ -35,7 +37,7 @@ export const ROUTES: Routes = [
     //     { path: 'restaurant/:id', component: RestaurantDetailComponent}
     //   ]
   },
-  { path: 'home', redirectTo: '' },
+  { path: 'home', redirectTo: '/' },
   { path: 'about', component: AboutComponent }
 ];
 @NgModule({
@@ -53,7 +55,8 @@ export const ROUTES: Routes = [
     EventComponent,
     GalleryComponent,
     ThumbnailComponent,
-    ViewerComponent
+    ViewerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
