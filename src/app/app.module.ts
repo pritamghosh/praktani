@@ -28,6 +28,7 @@ import { ThumbnailComponent } from './home/gallery/thumbnail/thumbnail.component
 import { ImageService } from './services/image.service';
 import { ViewerComponent } from './viewer/viewer.component';
 import { FooterComponent } from './footer/footer.component';
+import { EventModalComponent } from './modals/event-modal/event-modal.component';
 
 export const ROUTES: Routes = [
   {
@@ -56,7 +57,8 @@ export const ROUTES: Routes = [
     GalleryComponent,
     ThumbnailComponent,
     ViewerComponent,
-    FooterComponent
+    FooterComponent,
+    EventModalComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,7 @@ export const ROUTES: Routes = [
   providers: [ImageService],
   bootstrap: [AppComponent],
   entryComponents: [
-    ViewerComponent
+    EventModalComponent
   ]
 })
 export class AppModule { }

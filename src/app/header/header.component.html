@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color: #160846;">
 	<div class="navbar-header">
-		<a routerLink="/" class="navbar-brand">Praktani</a>
-		
+		<a routerLink="/" class="navbar-brand">প্রাক্তনী</a>
+
 	</div>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
 	 aria-expanded="false" aria-label="Toggle navigation">
@@ -9,28 +9,36 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			<!-- <li class="nav-item " routerLinkActive="active">
-				<a class="nav-link" routerLink="/">
-					 <i class="fa fa-home" aria-hidden="true"></i> 
+
+			<li class="nav-item dropdown ">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown">
+					About
 				</a>
-			</li> -->
+				<ul class="dropdown-menu" role="menu">
+					<a class="dropdown-item" href="#">Overview</a>
+					<li class="divider dropdown-divider"></li>
+					<a class="dropdown-item" href="#">Vission & Mission</a>
+					<li class="divider dropdown-divider"></li>
+					<a class="dropdown-item" href="#">Objective</a>
+					<li class="divider dropdown-divider"></li>
+					<a class="dropdown-item" href="#">Executive Council</a>
+					<li class="divider dropdown-divider"></li>
+					<a class="dropdown-item" href="#">Contact US</a>
+				</ul>
 
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" routerLink="/about">About Us</a>
 			</li>
+			<li class="nav-item dropdown ">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown">
+					Membership
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<a class="dropdown-item" href="#">Responsibilities & Benefits</a>
+					<li class="divider dropdown-divider"></li>
+					<a class="dropdown-item" href="#">Membership Application</a>
+					<li class="divider dropdown-divider"></li>
+					<a class="dropdown-item" href="#">Call for Membership</a>
+				</ul>
 
-
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" routerLink="/#">Reunion</a>
-			</li>
-
-
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" routerLink="/#">Volunteer</a>
-			</li>
-
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" routerLink="/#">Blog</a>
 			</li>
 
 			<li class="nav-item" routerLinkActive="active">
@@ -38,10 +46,23 @@
 			</li>
 
 			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" routerLink="/#">Reunion</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
 				<a class="nav-link" routerLink="/#">Donation</a>
 			</li>
-
 		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<div class="input-group ">
+				<input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+				<div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">
+						<i class="fa fa-search"></i>
+					</span>
+				</div>
+			</div>
+		</form>
+
 	</div>
 
 
