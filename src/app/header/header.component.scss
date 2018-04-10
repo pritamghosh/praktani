@@ -1,18 +1,21 @@
 .navbar-brand{
     font-size: 20px;
 }
-.dropdown-menu{
-    background-color: #160846;
-    .dropdown-item{
-        color: silver;
-       
-    };
-     a:hover{
-      background-color: silver;
-      color:#160846;   
-    };
-    a:focus{
+.dropdown{
+    cursor: pointer ;
+    .dropdown-menu{
+        background-color: #160846;
+        .dropdown-item{
+            color: silver;
+        
+        };
+        a:hover{
         background-color: silver;
         color:#160846;   
-      }
+        };
+        a:focus{
+            background-color: silver;
+            color:#160846;   
+        }
+    }
 }

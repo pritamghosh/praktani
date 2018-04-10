@@ -29,6 +29,12 @@ import { ImageService } from './services/image.service';
 import { ViewerComponent } from './viewer/viewer.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventModalComponent } from './modals/event-modal/event-modal.component';
+import { ContactComponent } from './about/contact/contact.component';
+import { MembershipComponent } from './membership/membership.component';
+import { ApplicationComponent } from './membership/application/application.component';
+import { CallMembershipComponent } from './membership/call-membership/call-membership.component';
+import { TitleComponent } from './shared/title/title.component';
+import { ResposibilityAndBenefitComponent } from './membership/resposibility-and-benefit/resposibility-and-benefit.component';
 
 export const ROUTES: Routes = [
   {
@@ -38,8 +44,12 @@ export const ROUTES: Routes = [
     //     { path: 'restaurant/:id', component: RestaurantDetailComponent}
     //   ]
   },
+  { path: 'about/contact', component: ContactComponent },
+  {path:'membership',component:MembershipComponent}
+  { path: 'membership/rb', component: ResposibilityAndBenefitComponent },
+  { path: 'membership/ma', component: ApplicationComponent },
+  { path: 'membership/cm', component: CallMembershipComponent },
   { path: 'home', redirectTo: '/' },
-  { path: 'about', component: AboutComponent }
 ];
 @NgModule({
   declarations: [
@@ -58,7 +68,13 @@ export const ROUTES: Routes = [
     ThumbnailComponent,
     ViewerComponent,
     FooterComponent,
-    EventModalComponent
+    EventModalComponent,
+    ContactComponent,
+    MembershipComponent,
+    ApplicationComponent,
+    CallMembershipComponent,
+    TitleComponent,
+    ResposibilityAndBenefitComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +84,7 @@ export const ROUTES: Routes = [
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),
     BsDropdownModule.forRoot(),
-    RouterModule.forRoot(ROUTES), 
+    RouterModule.forRoot(ROUTES),
     CarouselModule.forRoot(),
     NgxImageGalleryModule,
     BrowserAnimationsModule
