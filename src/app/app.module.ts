@@ -21,7 +21,6 @@ import { EventListComponent } from './home/event-list/event-list.component';
 
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { NewsListComponent } from './home/news-list/news-list.component';
-import { EventComponent } from './home/event-list/event/event.component';
 import { NewsComponent } from './home/news-list/news/news.component';
 import { GalleryComponent } from './home/gallery/gallery.component';
 import { ThumbnailComponent } from './home/gallery/thumbnail/thumbnail.component';
@@ -35,6 +34,8 @@ import { ApplicationComponent } from './membership/application/application.compo
 import { CallMembershipComponent } from './membership/call-membership/call-membership.component';
 import { TitleComponent } from './shared/title/title.component';
 import { ResposibilityAndBenefitComponent } from './membership/resposibility-and-benefit/resposibility-and-benefit.component';
+import { EventCardComponent } from './home/event-list/event-card/event-card.component';
+import { EventDetailComponent } from './shared/event-detail/event-detail.component';
 
 export const ROUTES: Routes = [
   {
@@ -45,10 +46,11 @@ export const ROUTES: Routes = [
     //   ]
   },
   { path: 'about/contact', component: ContactComponent },
-  {path:'membership',component:MembershipComponent}
+  {path:'membership', component:MembershipComponent},
   { path: 'membership/rb', component: ResposibilityAndBenefitComponent },
   { path: 'membership/ma', component: ApplicationComponent },
   { path: 'membership/cm', component: CallMembershipComponent },
+  { path: 'event/:id', component: EventDetailComponent},
   { path: 'home', redirectTo: '/' },
 ];
 @NgModule({
@@ -58,12 +60,10 @@ export const ROUTES: Routes = [
     HomeComponent,
     AboutComponent,
     EventListComponent,
-    EventComponent,
     NewsListComponent,
     NewsComponent,
     CarouselComponent,
     NewsListComponent,
-    EventComponent,
     GalleryComponent,
     ThumbnailComponent,
     ViewerComponent,
@@ -75,6 +75,8 @@ export const ROUTES: Routes = [
     CallMembershipComponent,
     TitleComponent,
     ResposibilityAndBenefitComponent,
+    EventCardComponent,
+    EventDetailComponent,
   ],
   imports: [
     BrowserModule,

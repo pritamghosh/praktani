@@ -2,9 +2,12 @@ export class Event {
 
     isFutureEvent=false;
     constructor(
-        public imgPath: string,
+        public id:number,
+        public thumbImgPath: string,
+        public bannerImgPath: string,
         public date: Date,
-        public name: string,
-        public location: string
+        public title: string,
+        public venue: string,
+        public venueLink?:string
     ) { }
 }

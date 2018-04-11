@@ -8,7 +8,7 @@ import { Event } from '../../models/event.model';
   styleUrls: ['./event-modal.component.scss']
 })
 export class EventModalComponent implements OnInit {
-  event:Event=new Event('assets/images/smily1.png', new Date(), 'Event 1', 'CGR');
+  event:Event=new Event(1,'','assets/images/smily1.png', new Date(), 'Event 1', 'CGR');
   constructor(private modalRef: BsModalRef) {
     console.log(this.event);
    }

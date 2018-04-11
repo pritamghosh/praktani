@@ -1,0 +1,27 @@
+<div class="evt-card">
+  <div class="card-container">
+    <a>
+      <img [src]="event.thumbImgPath" alt=" {{ event.title}} " >
+    </a>
+  </div>
+  <div class="detail">
+    <div class="evt-info">
+      <!-- <div class="evt-date-col">
+        <p class="evt-month">APR</p>
+        <p class="evt-date">21</p>
+        <p class="evt-day">SAT</p>
+      </div> -->
+      <div class="evt-info-col">
+        <a id="title">
+          <strong>{{ event.title}}</strong>
+        </a>
+        <div class="location">
+          <a>{{event.venue}}</a>
+        </div>
+        <div class="date">
+          <span content="2018-04-28 04:45:00"><i class="fa fa-calendar-o"></i> {{event.date | date: 'mediumDate'}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

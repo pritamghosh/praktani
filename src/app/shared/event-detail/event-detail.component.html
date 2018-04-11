@@ -1,0 +1,66 @@
+<div class="event-banner">
+  <a>
+    <img [src]="event.bannerImgPath" alt="{{event.title}}">
+  </a>
+</div>
+<div class="container">
+  <div class="content">
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="description">
+          <h1>DESCRIPTION:</h1>
+          <a>
+            Bangalore Open Air has long been considered to be the biggest Rock &amp; Heavy Metal festival in India. The festival saw
+            its inception 6 years ago and has gone from strength to strength in every subsequent year, garnering rock fans
+            from all over the country while simultaneously building a world-class reputation for itself. The festival is
+            powered by Wacken Open Air (Germany), which is the largest heavy metal festival in the world.
+            <br>
+            <br>Over the years Bangalore Open Air has proven to be a virtual mecca for rock fans from all over the Indian subcontinent
+            and many parts of Asia as well, uniting thousands of music fans from all walks of life for a once in a lifetime
+            experience every year. The 7th edition of the festival is scheduled to take place on the 7th of July 2018 and
+            is expected to bigger and better than ever before.
+            <br>
+            <br>Primarily a youth-centric festival that has literally captured the imagination of music fans from far and wide,
+            the festival has featured over 40 international artists, many of whom boast iconic stature in the rock and heavy
+            metal world. The festival also promotes local talent and has seen some of the sub-continent's finest artists
+            grace its stages.
+            <br>
+            <br>At present, it is the only Bangalore-based festival that has managed to not only survive, but also thrive over
+            such a long period. With audiences increasing every single year, the festival shows no signs of slowing down,
+            especially since it has caught the eye of international rock and metal publications and media.
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="side-pane">
+          <div class="date-time">
+            <h1>Date And Time:</h1>
+            <a>{{event.date | date:'EEE , MMM dd, yyyy, HH:mm aa'}}</a>
+            <div>
+              <button class="btn btn-sm">
+                <i class="fa fa-calendar-plus-o "></i> Add to Calender</button>
+            </div>
+          </div>
+          <div class="location">
+            <h1>Location:</h1>
+            <a>{{event.venue}}</a>
+            <p>
+              <iframe frameborder="1" style="border:0" src="{{event.venueLink}}"
+                allowfullscreen></iframe>
+            </p>
+          </div>
+          <div class="share">
+              <h1>Share with friends:</h1>
+              <div class="social-links">
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-google-plus"></a>
+                  <a href="#" class="fa fa-email"></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

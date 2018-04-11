@@ -1,10 +1,18 @@
 .event-container{
-    background-color: rgb(255, 255, 255);
+   // background-color: rgb(255, 255, 255);
     color: #35373a;
     min-height: 100vh;
     border-radius: 20px;
     padding: 20px;
     margin: 20px 5px 20px 10px;
+
+    .arrow{
+        i{
+            font-size:60px;
+            color:lightgray;
+            margin-top:18%;
+        }
+    }
 }
 
 .event-div {
@@ -13,32 +21,9 @@
         text-align:center;
     };
 }
-.row{
- 
-    display: block;
-}
+
 h1{
     text-align: center;
     font-family: 'Droid Sans', sans-serif;
     font-weight: bold;
-}
-@-webkit-keyframes scroll {
-    0%{
-        -webkit-transform: translateY(10%)
-    }
-    100%{
-        -webkit-transform: translateY(-10%)
-    }
-    
-}
-
-.marquee{
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    div {
-        display: block;
-        padding-top: 0%; 
-        -webkit-animation: scroll 6s infinite linear;
-    }
 }

@@ -1,0 +1,96 @@
+
+.evt-card{
+    text-align: left;
+    width: 100%;
+    position: relative;
+    //min-height: 350px;
+    background-color: #fff;
+    margin: 5px;
+    cursor: pointer;
+    .card-container{
+        transition: all .5s ease;
+        //height: 200px;
+        //width: 250px;
+        //width: 100%;
+        position: relative;
+        background-size: cover!important;
+        background-position: center;
+        overflow: hidden;
+        img{
+            width:100%;
+        }
+    };
+    .detail{
+        transition: all .5s ease;
+        position: relative;
+        //height: 195px!important;
+        overflow: hidden;
+        background: #fff;
+        .evt-info{
+            padding: 10px 0;
+            overflow: hidden;
+            //min-height: 110px;
+            // .evt-date-col{
+            //     width: 25%;
+            //     float: left;
+            //     text-align: center;
+            //     border-right: 1px solid #f1f1f1;
+            //     padding: 5px 0;
+            //     .evt-month{
+            //         color: #d75d5f;
+            //         font-size: 10px;
+            //         text-transform: uppercase;
+            //     };
+            //     .evt-date{
+            //         color: #333;
+            //         font-size: 16px;
+            //         margin-bottom: 4px;
+            //     };
+            //     .evt-day{
+            //         color: #333;
+            //         font-size: 10px;
+            //         text-transform: uppercase;
+            //     }
+    
+            // };
+            .evt-info-col{
+                width: 75%;
+                float: left;
+                padding: 5px 15px;
+                    a{
+                        padding: 0;
+                        font-size: 100%;
+                        text-decoration: none;
+                        vertical-align: baseline;
+                        background: 0 0;
+                    };
+                    #title{
+                        font-size: 14px;
+                        color: #333;
+                        margin: 0;
+                    }
+                .location {
+                    min-height: 30px;
+                    padding: 0;
+                    line-height: 14px;
+                    margin-bottom: 4px;
+                    font-size: 10px;    
+                };
+                .date{
+                    span{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    };
+    
+    p{
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    
+}

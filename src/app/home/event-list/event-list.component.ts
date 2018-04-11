@@ -10,63 +10,71 @@ export class EventListComponent implements OnInit {
   events: Event[] = [];
   event1: Event;
   event2: Event;
-  private firstEventIndex :number;
-  private isArrowClicked=true;
+  private firstEventIndex: number;
+  private isArrowClicked = true;
+  private isMouseEntered = false;
   constructor() { }
 
   ngOnInit() {
     {
-      this.events.push(new Event('assets/images/smily1.png', new Date(), 'Event 1', 'CGR'));
-      this.events.push(new Event('assets/images/smily2.png', new Date(), 'Event 2', 'KOL'));
-      this.events.push(new Event('assets/images/smily3.jpg', new Date(), 'Event 3', 'BHR'));
-      this.events.push(new Event('assets/images/smily4.jpg', new Date(), 'Event 4', 'BLY'));
+      this.events.push(new Event(1,'assets/images/event/event1.jpg','assets/images/event/eventd1.jpg', new Date(2018, 3, 1), 'Event 1', 'Manpho Convention Centre: Bengaluru'));
+      this.events.push(new Event(2,'assets/images/event/event2.jpg','assets/images/event/eventd2.jpg', new Date(2018, 4, 13), 'Event 2', 'Rabindra Bhavan : Chandernagore'));
+      this.events.push(new Event(3,'assets/images/event/event3.jpg','assets/images/event/eventd3.jpg', new Date(2018, 6, 19), 'Event 3', 'Nazrulmancha : Kolkata'));
+      this.events.push(new Event(4,'assets/images/event/event4.jpg','assets/images/event/eventd4.jpg', new Date(2018, 12, 26), 'Event 4', 'Chandernagore Banga Vidyalaya: Chandernagore'));
     }
-    this.firstEventIndex=this.events.length-1;
+    this.firstEventIndex = this.events.length - 1;
     this.updateEvent(true)
 
 
-    setInterval(() => {
-      if(!this.isArrowClicked){
-        this.updateEvent(true);
-      }
-      else{
-        setInterval(() => {
-         this.isArrowClicked=false
-        }, 4000);
-      }
-    }, 4000);
+    // setInterval(() => {
+    //   if (!this.isArrowClicked && !this.isMouseEntered) {
+    //     this.updateEvent(true);
+    //   }
+    //   else {
+    //     setInterval(() => {
+    //       this.isArrowClicked = false
+    //     }, 4000);
+    //   }
+    // }, 4000);
   }
-   private updateEvent(isFwd: boolean) {
+  private updateEvent(isFwd: boolean) {
     if (this.events.length != this.firstEventIndex) {
       this.event1 = this.events[this.firstEventIndex];
       this.updateIndex(isFwd);
       this.event2 = this.events[this.firstEventIndex];
-      
+
     }
   }
 
-  private changeEvent(isFwd:boolean){
+  private changeEvent(isFwd: boolean) {
     this.updateEvent(isFwd);
-    this.isArrowClicked=true;
+    this.isArrowClicked = true;
+  }
+  onMouseEnter() {
+    this.isMouseEntered = true
+  }
+  onMouseLeave() {
+    this.isMouseEntered = false
   }
   private updateIndex(isFwd: boolean) {
-    if (this.events.length != 0) {
-      if (isFwd) {
-        if (this.firstEventIndex == this.events.length - 1) {
-          this.firstEventIndex = 0;
+
+      if (this.events.length != 0) {
+        if (isFwd) {
+          if (this.firstEventIndex == this.events.length - 1) {
+            this.firstEventIndex = 0;
+          }
+          else {
+            this.firstEventIndex = this.firstEventIndex + 1;
+          }
         }
         else {
-          this.firstEventIndex = this.firstEventIndex + 1;
+          if (this.firstEventIndex == 0) {
+            this.firstEventIndex = this.events.length - 1;
+          }
+          else {
+            this.firstEventIndex = this.firstEventIndex - 1;
+          }
         }
       }
-      else {
-        if (this.firstEventIndex == 0) {
-          this.firstEventIndex = this.events.length - 1;
-        }
-        else {
-          this.firstEventIndex = this.firstEventIndex - 1;
-        }
-      }
-    }
   }
 }
