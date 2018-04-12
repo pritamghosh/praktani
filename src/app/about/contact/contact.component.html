@@ -19,8 +19,49 @@
           <strong>E-mail</strong>:
           <a href="mailto:19pritamghosh93@gmail.com" target="_blank" rel="noopener">19pritamghosh93@gmail.com</a>
         </p>
-        <p>&nbsp;</p>
+      </div>
+      <div class="contact-form">
         <h4>Contact Form</h4>
+        <div class="row">
+          <div class="col-xs-12 col-sm-10 col-md-12">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">
+                      <i class="fa fa-user" style="font-size: 22px"></i>
+                    </span>
+                  </div>
+                  <input type="text" id="name" formControlName="name" placeholder="Your Name" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                  <input type="email" id="email" formControlName="email" placeholder="Your Email" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Select Subject </label>
+                <select class="form-control" id="subject" formControlName="subject">
+                  <option *ngFor='let subjectItem of subjectList' [value]="subjectItem">{{subjectItem}}</option>
+                </select>
+                <p style="font-size: 7px">&nbsp;</p>
+                <input type="text" id="otherSubject" formControlName="otherSubject" placeholder="Please mention the Subject..." class="form-control"
+                  [hidden]="!isOtherSubjectVisible">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleTextarea" formControlName="message" placeholder="Write your message here... " rows="3"></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
       </div>
 
     </div>

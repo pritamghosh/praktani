@@ -36,6 +36,7 @@ import { TitleComponent } from './shared/title/title.component';
 import { ResposibilityAndBenefitComponent } from './membership/resposibility-and-benefit/resposibility-and-benefit.component';
 import { EventCardComponent } from './home/event-list/event-card/event-card.component';
 import { EventDetailComponent } from './shared/event-detail/event-detail.component';
+import { RegistrationComponent } from './shared/registration/registration.component';
 
 export const ROUTES: Routes = [
   {
@@ -51,6 +52,7 @@ export const ROUTES: Routes = [
   { path: 'membership/ma', component: ApplicationComponent },
   { path: 'membership/cm', component: CallMembershipComponent },
   { path: 'event/:id', component: EventDetailComponent},
+  { path: 'registration', component: RegistrationComponent},
   { path: 'home', redirectTo: '/' },
 ];
 @NgModule({
@@ -77,11 +79,12 @@ export const ROUTES: Routes = [
     ResposibilityAndBenefitComponent,
     EventCardComponent,
     EventDetailComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpModule,
     ModalModule.forRoot(),
     BsDatepickerModule.forRoot(),

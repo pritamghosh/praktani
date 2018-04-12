@@ -1,11 +1,35 @@
-.info{
-    padding: 0;
-    p{
-        display: block;
+.container{
+    padding-top: 20px;
+    .info{
         padding: 0;
-        span{
-            font-size: 15px;
+        p{
+            display: block;
+            padding: 0;
+            span{
+                font-size: 15px;
+            }
+            
         }
-        
+    }
+    .contact-form{
+        padding-bottom: 20px;
+        padding-top: 20px;
+        h4{
+            font-size: 20px;
+        }
+        form{
+            label{
+                font-weight: 600;
+                padding:0;
+            }
+            input{
+                .ng-invalid,.ng-touched {
+                    border: 1px solid red;
+                };
+                .ng-valid {
+                    border: 1px solid green;
+                }
+            }
+        }
     }
 }
