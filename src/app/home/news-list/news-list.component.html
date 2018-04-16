@@ -1,5 +1,7 @@
 <div class="news-container">
   <h1>Updates</h1>
-  
   <hr/>
-</div>
+  <div *ngFor="let news of newsList">
+    <app-news [news]="news"></app-news>
+  </div>
+  </div>
