@@ -1,0 +1,24 @@
+@media only screen and (min-width: 900px) {
+.carousel{
+   margin-left:  14%;
+   margin-right: 14%;
+    img{
+    display: block;
+    max-height: 500px;
+    max-width: 800px;
+    border-radius: 10px;
+    
+    }
+}
+}
+@media only screen and (max-width: 800px) {
+    .carousel{
+    img{
+        // padding-left: 5%;
+        // padding-right: 5%;
+        display: block;
+        width: 100%;
+        border-radius: 0px
+    }
+}
+}

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Http } from '@angular/http';
+import { saveAs } from 'file-saver';
+
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +12,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   isOtherSubjectVisible = false;
+  attachment : File;
   subjectList: string[] = [
     'Please Select a Subject...',
     'Membership Query',
@@ -17,7 +21,7 @@ export class ContactComponent implements OnInit {
     'Event Query',
     'Other - Subject is not Listed'
   ];
-  constructor() { }
+  constructor(private http:Http) { }
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -25,7 +29,8 @@ export class ContactComponent implements OnInit {
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'subject': new FormControl(this.subjectList[0], [Validators.required, this.invalidSubject.bind(this)]),
       'otherSubject': new FormControl(null, [this.isOtherSubjectValid.bind(this)]),
-      'message': new FormControl(null, [Validators.required,,this.required.bind(this)])
+      'message': new FormControl(null, [Validators.required,,this.required.bind(this)]),
+      'attachment': new FormControl(null)
     });
     this.contactForm.valueChanges.subscribe(
       (value) => {
@@ -56,5 +61,35 @@ export class ContactComponent implements OnInit {
     }
     return null;
   }
+
+  fileChange(event:any){
+    let file = event.target.files[0]; // <--- File Object for future use.
+    this.contactForm.controls['attachment'].setValue(file ? file.name : '');
+    this.attachment=event.target.files[0];
+    console.log(event.target.files[0]);
+    var fileReader = new FileReader();
+    fileReader.readAsDataURL(event.target.files[0]);
+    console.log(fileReader);
+    console.log(fileReader.result);
+    // fileReader.onload = function(e) {
+		// 	console.log(fileReader.result);
+			
+
+		// }
+    
+  }
+  onSubmit(){
+    console.log(this.contactForm.value);
+    
+  //   var data = new Blob(["gh"], { type: 'text/plain;charset=utf-8' });
+  //   saveAs(data, 'text.txt');
+  //   this.http.post('assets/test.txt','dd').subscribe(date=>{
+  //     console.log(data);
+  //   })
+  //   this.http.get('assets/test.txt').subscribe(data => {
+  //     console.log(data.text());
+  // })
+  }
+
 
 }

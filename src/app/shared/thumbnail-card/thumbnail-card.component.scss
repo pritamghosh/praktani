@@ -1,5 +1,5 @@
 
-.evt-card{
+.thumb-card{
     text-align: left;
     width: 100%;
     position: relative;
@@ -26,10 +26,10 @@
         //height: 195px!important;
         overflow: hidden;
         background: #fff;
-        .evt-info{
+        .thumb-info{
             padding: 10px 0;
             overflow: hidden;
-            .evt-info-col{
+            .thumb-info-col{
                 width: 75%;
                 float: left;
                 padding: 5px 15px;
@@ -45,7 +45,7 @@
                         color: #333;
                         margin: 0;
                     }
-                .location {
+                .description {
                     min-height: 30px;
                     padding: 0;
                     line-height: 14px;

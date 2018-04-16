@@ -1,7 +1,9 @@
-<div class="evt-card">
+<div class="evt-card" (click)="onEventClick()">
   <div class="card-container">
     <a>
       <img [src]="event.thumbImgPath" alt=" {{ event.title}} " >
+      <a class="prev" (click)="nextSlide(-1)" #left (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isLeftHidden>&#10094;</a>
+      <a class="next" (click)="nextSlide(1)" #right (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isRightHidden>&#10095;</a>
     </a>
   </div>
   <div class="detail">

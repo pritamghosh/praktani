@@ -1,15 +1,22 @@
 <div class="home">
-	<div class="row carousal">
-		<app-carousel></app-carousel>
+	<app-carousel></app-carousel>
+	<div class="container-fluid">
 
-	</div>
-	<div class="row ">
-		<div class="col-md-12 col-sm-12 ">
-			<app-event-list></app-event-list>
+		<div class="row">
+			<div class="col-md-9">
+				<div class="display-container">
+					<app-event-list></app-event-list>
+					<app-gallery></app-gallery>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<app-news-list></app-news-list>
+			</div>
 		</div>
-		<div class="col-md-12 col-sm-12">
-			<app-gallery></app-gallery>
-		</div>
 	</div>
+	<!-- <div class="row"> -->
+
+	<!-- </div> -->
 
 </div>

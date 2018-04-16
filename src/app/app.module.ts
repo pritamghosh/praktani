@@ -37,6 +37,7 @@ import { ResposibilityAndBenefitComponent } from './membership/resposibility-and
 import { EventCardComponent } from './home/event-list/event-card/event-card.component';
 import { EventDetailComponent } from './shared/event-detail/event-detail.component';
 import { RegistrationComponent } from './shared/registration/registration.component';
+import { ThumbnailCardComponent } from './shared/thumbnail-card/thumbnail-card.component';
 
 export const ROUTES: Routes = [
   {
@@ -80,6 +81,7 @@ export const ROUTES: Routes = [
     EventCardComponent,
     EventDetailComponent,
     RegistrationComponent,
+    ThumbnailCardComponent,
   ],
   imports: [
     BrowserModule,

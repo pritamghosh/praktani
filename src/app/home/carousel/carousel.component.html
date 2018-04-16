@@ -1,10 +1,12 @@
-<carousel class="text-center" [noPause]=false [interval]=2000 [noWrap]=false >
+<div class="carousel">
+	<carousel [noPause]=false [interval]=2000 [noWrap]=false>
 		<slide *ngFor="let slide of slides; let index=index">
-			<img [src]="slide.src" alt="image slide"  >
-			
+			<img [src]="slide.src" alt="image slide">
+
 			<div class="carousel-caption">
 				<h4>Slide {{index}}</h4>
 				<p>{{slide.captionBody}}</p>
 			</div>
 		</slide>
 	</carousel>
+</div>

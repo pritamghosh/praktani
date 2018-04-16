@@ -1,22 +1,29 @@
 <div class="event-container">
+  <div class="row">
+    <div class="col-xs-6">
+      <h1>Events</h1>
 
-  <h1> Events</h1>
-
-  <div class="row ">
+    </div>
+    <div class="col-xs-6">
+      <!-- <a>Show all Events</a> -->
+    </div>
+  </div>
+  <hr/>
+  <div class="row" (nextSlideEvent)="nextSlide($event)">
     <!-- <div class="arrow">
       <i class="fa fa-angle-left pull-left" (click)="changeEvent(false)"></i>
     </div> -->
-    <div class="col-md-3 event">
-      <app-event-card [event]="event1" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" routerLink="event/1"></app-event-card>
+    <div class="col-md-4 col-sm-6 col-xs-12" (nextSlideEvent)="nextSlide($event)">
+      <app-event-card [event]="event1" [isLeftHidden]="false" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
     </div>
-    <div class="col-md-3 event">
+    <div class="col-md-4 col-sm-6 col-xs-12">
       <app-event-card [event]="event2" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
     </div>
-    <div class="col-md-3 event">
+    <!-- <div class="col-md-4 col-sm-6 col-xs-12">
       <app-event-card [event]="event1" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
-    </div>
-    <div class="col-md-3 event">
-      <app-event-card [event]="event2" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
+    </div> -->
+    <div class="col-md-4 col-sm-6 col-xs-12" (nextSlideEvent)="nextSlide($event)">
+      <app-event-card [event]="event2" [isRightHidden]="false" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
     </div>
     <!-- <div class="arrow">
         <i class="fa fa-angle-right pull-left" style="font-size:60px;color:lightgray;" (click)="changeEvent(true)"></i>

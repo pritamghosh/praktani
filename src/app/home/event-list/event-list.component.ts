@@ -37,6 +37,11 @@ export class EventListComponent implements OnInit {
     //   }
     // }, 4000);
   }
+
+  nextSlide(event:any){
+    console.log(event);
+  }
+
   private updateEvent(isFwd: boolean) {
     if (this.events.length != this.firstEventIndex) {
       this.event1 = this.events[this.firstEventIndex];
@@ -45,6 +50,7 @@ export class EventListComponent implements OnInit {
 
     }
   }
+
 
   private changeEvent(isFwd: boolean) {
     this.updateEvent(isFwd);

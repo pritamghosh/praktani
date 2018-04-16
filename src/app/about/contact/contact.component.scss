@@ -1,5 +1,5 @@
 .container{
-    padding-top: 20px;
+    padding-top: 10px;
     .info{
         padding: 0;
         p{
@@ -23,11 +23,30 @@
                 padding:0;
             }
             input{
-                .ng-invalid,.ng-touched {
+                .ng-invalid .ng-touched {
                     border: 1px solid red;
                 };
                 .ng-valid {
                     border: 1px solid green;
+                }
+            }
+        }
+    }
+    .location{
+        h4{
+            font-size: 20px;
+        }
+        p{
+            padding-top: 10px;
+            .location-iframe{
+                height: 500px;
+                width: 500px
+            }
+
+            @media only screen and (max-width: 1400px) {
+                .location-iframe{
+                    height: 300px;
+                    width: 100%;
                 }
             }
         }

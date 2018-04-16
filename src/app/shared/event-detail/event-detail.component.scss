@@ -43,12 +43,27 @@
             }
         }
     }
+    @media only screen and (min-width: 768px) {
+        .side-pane{
+            padding-left: 20px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .side-pane{
+            padding-top: 20px;
+        }
+    }
     .side-pane{
-        padding-left: 20px;
+        
+        
         .btn{
             margin-top: 5px;
             margin-bottom: 5px;
-            background-color: lightseagreen;
+            background-color: rgba(33, 146, 140, 0.753);
+        }
+
+        .location{
+            padding-top: 20px;
         }
     }
 }

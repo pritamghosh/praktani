@@ -1,0 +1,26 @@
+<div class="thumb-card" (click)="onEventClick()">
+  <div class="card-container">
+    <a>
+      <img [src]="thumbImgPath" alt=" {{ thumbnail.title}} " >
+      <!-- <a class="prev" (click)="nextSlide(-1)" #left (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isLeftHidden>&#10094;</a>
+      <a class="next" (click)="nextSlide(1)" #right (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isRightHidden>&#10095;</a> -->
+    </a>
+  </div>
+  <div class="detail">
+    <div class="thumb-info">
+      <!-- <div class="evt-date-col">
+        <p class="evt-month">APR</p>
+        <p class="evt-date">21</p>
+        <p class="evt-day">SAT</p>
+      </div> -->
+      <div class="thumb-info-col">
+        <a id="title">
+          <strong>{{ thumbnail.title}}</strong>
+        </a>
+        <div class="description">
+          <a>{{thumbnail.description}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
