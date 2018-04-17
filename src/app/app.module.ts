@@ -23,11 +23,9 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { NewsListComponent } from './home/news-list/news-list.component';
 import { NewsComponent } from './home/news-list/news/news.component';
 import { GalleryComponent } from './home/gallery/gallery.component';
-import { ThumbnailComponent } from './home/gallery/thumbnail/thumbnail.component';
 import { ImageService } from './services/image.service';
 import { ViewerComponent } from './viewer/viewer.component';
 import { FooterComponent } from './footer/footer.component';
-import { EventModalComponent } from './modals/event-modal/event-modal.component';
 import { ContactComponent } from './about/contact/contact.component';
 import { MembershipComponent } from './membership/membership.component';
 import { ApplicationComponent } from './membership/application/application.component';
@@ -79,10 +77,8 @@ export const ROUTES: Routes = [
     CarouselComponent,
     NewsListComponent,
     GalleryComponent,
-    ThumbnailComponent,
     ViewerComponent,
     FooterComponent,
-    EventModalComponent,
     ContactComponent,
     MembershipComponent,
     ApplicationComponent,
@@ -114,8 +110,5 @@ export const ROUTES: Routes = [
   ],
   providers: [ImageService],
   bootstrap: [AppComponent],
-  entryComponents: [
-    EventModalComponent
-  ]
 })
 export class AppModule { }

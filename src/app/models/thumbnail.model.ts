@@ -2,7 +2,7 @@ import { Image } from "./image.model";
 
 export class Thumbnail {
     constructor(
-        public name:string,
+        public title:string,
         public images: Image[],
         public description: string
     ) { }

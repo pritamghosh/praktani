@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { Event } from '../../../models/event.model';
 
 @Component({
   selector: 'app-event-card',
