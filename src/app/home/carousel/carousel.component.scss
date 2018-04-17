@@ -1,12 +1,14 @@
 @media only screen and (min-width: 900px) {
 .carousel{
-   margin-left:  14%;
-   margin-right: 14%;
+    padding-top:30px;
+    margin-left:  24%;
+    margin-right: 24%;
     img{
     display: block;
     max-height: 500px;
     max-width: 800px;
     border-radius: 10px;
+    width:100%
     
     }
 }

@@ -38,6 +38,11 @@ import { EventCardComponent } from './home/event-list/event-card/event-card.comp
 import { EventDetailComponent } from './shared/event-detail/event-detail.component';
 import { RegistrationComponent } from './shared/registration/registration.component';
 import { ThumbnailCardComponent } from './shared/thumbnail-card/thumbnail-card.component';
+import { PrivacyComponent } from './help/privacy/privacy.component';
+import { FaqComponent } from './help/faq/faq.component';
+import { RulesAndRegulationsComponent } from './help/rules-and-regulations/rules-and-regulations.component';
+import { FeedbackComponent } from './help/feedback/feedback.component';
+import { SitemapComponent } from './help/sitemap/sitemap.component';
 
 export const ROUTES: Routes = [
   {
@@ -48,13 +53,19 @@ export const ROUTES: Routes = [
     //   ]
   },
   { path: 'about/contact', component: ContactComponent },
-  {path:'membership', component:MembershipComponent},
+  {path:  'membership', component:MembershipComponent},
   { path: 'membership/rb', component: ResposibilityAndBenefitComponent },
   { path: 'membership/ma', component: ApplicationComponent },
   { path: 'membership/cm', component: CallMembershipComponent },
   { path: 'event/:id', component: EventDetailComponent},
-  { path: 'registration', component: RegistrationComponent},
+  { path: 'register', component: RegistrationComponent},
+  { path: 'rules-regulations', component: RulesAndRegulationsComponent},
+  { path: 'faq', component: FaqComponent},
+  { path: 'feedback', component: FeedbackComponent},
+  { path: 'privacy-policy', component: PrivacyComponent},
+  { path: 'sitemap', component: SitemapComponent},
   { path: 'home', redirectTo: '/' },
+  { path: 'registration', redirectTo: 'register' }
 ];
 @NgModule({
   declarations: [
@@ -82,6 +93,11 @@ export const ROUTES: Routes = [
     EventDetailComponent,
     RegistrationComponent,
     ThumbnailCardComponent,
+    PrivacyComponent,
+    FaqComponent,
+    RulesAndRegulationsComponent,
+    FeedbackComponent,
+    SitemapComponent,
   ],
   imports: [
     BrowserModule,

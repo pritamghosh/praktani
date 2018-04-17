@@ -8,7 +8,7 @@ import { Thumbnail } from '../../models/thumbnail.model';
 })
 export class ThumbnailCardComponent implements OnInit {
   @Input() thumbnail: Thumbnail
-  public thumbImgPath = "assets/images/event/event1.jpg";
+  public thumbImgPath = "assets/images/gallery/thumb4/benches.jpg";
   constructor() { }
 
   ngOnInit() {
