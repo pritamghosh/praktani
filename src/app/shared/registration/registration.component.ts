@@ -12,8 +12,8 @@ export class RegistrationComponent implements OnInit {
   degreeList = ['Secondary', 'Higher Secondary'];
   departmentList = ['Science', 'Arts', 'Commerce'];
   occupationList = ['Govt. Employee', 'Private Sector Employee', 'Self Employeed', 'Other']
-  picture:File;
-  doucument:File;
+  picture: File;
+  doucument: File;
   constructor() { }
 
   ngOnInit() {
@@ -55,13 +55,13 @@ export class RegistrationComponent implements OnInit {
         'picture': new FormControl(),
         'document': new FormControl(null, this.required.bind(this))
       })
-      
+
     });
 
 
     this.registrationForm.valueChanges.subscribe(
       (value) => {
-      //  console.log(this.registrationForm);
+        //  console.log(this.registrationForm);
 
 
       });
@@ -69,20 +69,23 @@ export class RegistrationComponent implements OnInit {
 
   }
 
-  uploadFle(event: any,formControlName:string){
+  uploadFle(event: any, formControlName: string) {
     if (event.target.files[0] != null) {
       this.registrationForm.get('attachments').get(formControlName).setValue(event.target.files[0].name);
-  } else {
-    this.registrationForm.get('attachments').get(formControlName).setValue(null);
-  }
+    } else {
+      this.registrationForm.get('attachments').get(formControlName).setValue(null);
+    }
   }
 
+  onReset(){
+    this.registrationForm.reset();
+  }
 
   uploadDocument(event: any) {
-    
+
     const reader = new FileReader();
- 
-    if(event.target.files && event.target.files.length) {
+
+    if (event.target.files && event.target.files.length) {
       let file = event.target.files[0];
       reader.readAsDataURL(file);
       reader.onload = () => {
@@ -92,10 +95,10 @@ export class RegistrationComponent implements OnInit {
           value: reader.result.split(',')[1]
         })
       }
-        console.log(this.registrationForm);
-        
+      console.log(this.registrationForm);
+
     }
-    else{
+    else {
       this.registrationForm.get('attachments').get('picture').setValue(null);
     }
 
@@ -103,10 +106,10 @@ export class RegistrationComponent implements OnInit {
   }
 
   uploadPicture(event: any) {
-    
+
     const reader = new FileReader();
- 
-    if(event.target.files && event.target.files.length) {
+
+    if (event.target.files && event.target.files.length) {
       let file = event.target.files[0];
       reader.readAsDataURL(file);
       reader.onload = () => {
@@ -116,9 +119,9 @@ export class RegistrationComponent implements OnInit {
           value: reader.result.split(',')[1]
         })
       }
-        
+
     }
-    else{
+    else {
       this.registrationForm.get('attachments').get('picture').setValue('');
     }
 
