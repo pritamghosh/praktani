@@ -34,6 +34,8 @@ export class ContactComponent implements OnInit {
     });
     this.contactForm.valueChanges.subscribe(
       (value) => {
+        console.log(this.contactForm.value);
+        
         this.isOtherSubjectVisible = this.contactForm.get('subject').value == 'Other - Subject is not Listed';
       });
   }
@@ -64,18 +66,15 @@ export class ContactComponent implements OnInit {
 
   fileChange(event:any){
     let file = event.target.files[0]; // <--- File Object for future use.
-    this.contactForm.controls['attachment'].setValue(file ? file.name : '');
+    this.contactForm.controls['attachment'].setValue(file ? file : '');
     this.attachment=event.target.files[0];
-    console.log(event.target.files[0]);
     var fileReader = new FileReader();
     fileReader.readAsDataURL(event.target.files[0]);
-    console.log(fileReader);
-    console.log(fileReader.result);
-    // fileReader.onload = function(e) {
-		// 	console.log(fileReader.result);
+     fileReader.onload = function(e) {
+		 //	console.log(fileReader.result);
 			
 
-		// }
+		 }
     
   }
   onSubmit(){

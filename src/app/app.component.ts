@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  onActivate(e) {
-    console.log("new")
+  onActivate() {
     window.scrollTo(0, 0)
   }
 }

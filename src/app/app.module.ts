@@ -9,6 +9,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxImageGalleryModule } from 'ngx-image-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import 'hammerjs';
 
 

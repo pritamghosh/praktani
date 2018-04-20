@@ -1,62 +1,263 @@
-<div class="container">
-  <h1 class="well">Registration Form</h1>
-  <div class="col-lg-12 well">
+<app-title [title]="'Become A Member'"></app-title>
+<div class="container registrationForm">
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="row">
-      <form>
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-6 form-group">
-              <label>First Name</label>
-              <input type="text" placeholder="Enter First Name Here.." class="form-control">
+
+      <!-- Date of name div start -->
+      <div class="col-lg-6 col-md-12">
+        <div class="form-group">
+          <label class="required" for="name">Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <i class="fa fa-user" style="font-size: 22px"></i>
+              </span>
             </div>
-            <div class="col-sm-6 form-group">
-              <label>Last Name</label>
-              <input type="text" placeholder="Enter Last Name Here.." class="form-control">
-            </div>
+            <input type="text" id="name" formControlName="name" placeholder="Enter your name..." class="form-control">
           </div>
-          <div class="form-group">
-            <label>Address</label>
-            <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
-          </div>
-          <div class="row">
-            <div class="col-sm-4 form-group">
-              <label>City</label>
-              <input type="text" placeholder="Enter City Name Here.." class="form-control">
-            </div>
-            <div class="col-sm-4 form-group">
-              <label>State</label>
-              <input type="text" placeholder="Enter State Name Here.." class="form-control">
-            </div>
-            <div class="col-sm-4 form-group">
-              <label>Zip</label>
-              <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 form-group">
-              <label>Title</label>
-              <input type="text" placeholder="Enter Designation Here.." class="form-control">
-            </div>
-            <div class="col-sm-6 form-group">
-              <label>Company</label>
-              <input type="text" placeholder="Enter Company Name Here.." class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="text" placeholder="Enter Email Address Here.." class="form-control">
-          </div>
-          <div class="form-group">
-            <label>Website</label>
-            <input type="text" placeholder="Enter Website Name Here.." class="form-control">
-          </div>
-          <button type="button" class="btn btn-lg btn-info">Submit</button>
         </div>
-      </form>
+      </div>
+      <!-- Date of name div ens -->
+      <!-- Date of Email div start -->
+
+      <div class="col-lg-6 col-md-12">
+        <div class="form-group">
+          <label class="required" for="email">Email Address</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+            <input type="email" id="email" formControlName="email" placeholder="Enter your email..." class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <!-- Date of Email div end -->
+
+      <!-- Date of Gender div start -->
+
+      <div class="col-lg-3 col-md-12">
+
+        <div class="form-group">
+
+          <label for="gen">Gender</label>
+          <select id="gen" class="form-control" formControlName="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Date of Gender div end -->
+      <!-- Date of Birth div start -->
+      <div class="col-lg-3 col-md-6">
+        <div class="form-group">
+          <label class="required" for="dob">Date Of Birth</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <i class="	fa fa-calendar"></i>
+              </span>
+            </div>
+            <input type="date" id="dob" placeholder="mm/dd/yyyy" class="form-control" formControlName="dob">
+          </div>
+        </div>
+      </div>
+
+      <!-- Date of Birth div end -->
+
+      <!-- Contact No Div Start -->
+
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group">
+          <label class="required" for="contact">Contact No.</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <i class="fa fa-phone"></i>
+              </span>
+            </div>
+            <input type="text" id="contact" placeholder="9876543210" class="form-control" formControlName="contact">
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact No Div end -->
+
+      <!-- Addesss Div start -->
+
+      <div class="col-lg-12">
+        <div formGroupName="addresses" class="form-group">
+
+          <!-- Permanent Addesss Div start -->`
+          <div formGroupName="permanentAddress">
+            <label class="required" for="pl1">Permanent Address</label>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 form-group">
+                <input placeholder="Address Line 1" id="pl1" formControlName="line1" class="form-control">
+              </div>
+              <div class="col-lg-6 col-md-12 form-group">
+                <input placeholder="Address Line 2(Optional)" formControlName="line2" class="form-control">
+              </div>
+              <div class="col-sm-4 col-xs-12 form-group">
+                <input type="text" placeholder="City" formControlName="city" class="form-control">
+              </div>
+              <div class="col-sm-4 col-xs-6 form-group">
+                <input type="text" placeholder="State" formControlName="state" class="form-control">
+              </div>
+              <div class="col-sm-4 col-xs-6 form-group">
+                <input type="text" placeholder="ZIP Code" formControlName="zipCode" class="form-control">
+              </div>
+            </div>
+          </div>
+          <!-- Permanent Addesss Div end -->
+
+          <!-- Current Addesss Div start -->
+          <div formGroupName="currentAddress" readonly="true">
+            <label for="cl1" class="required">Current Address</label>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 form-group">
+                <input placeholder="Address Line 1" id="cl1" formControlName="line1" class="form-control">
+              </div>
+              <div class="col-lg-6 col-md-12 form-group">
+                <input placeholder="Address Line 2(Optional)" formControlName="line2" class="form-control">
+              </div>
+              <div class="col-sm-4 col-xs-12 form-group">
+                <input type="text" placeholder="City" formControlName="city" class="form-control">
+              </div>
+              <div class="col-sm-4 col-xs-6 form-group">
+                <input type="text" placeholder="State" formControlName="state" class="form-control">
+              </div>
+              <div class="col-sm-4 col-xs-6 form-group">
+                <input type="text" placeholder="ZIP Code" formControlName="zipCode" class="form-control">
+              </div>
+            </div>
+
+          </div>
+          <!-- Current Addesss Div end -->
+          <div class="row">
+            <div class="col-lg-12">
+              <label for="sameAs">
+                <input type="checkbox" id="sameAs" formControlName="sameAsPermanent" (change)="isSameAsPermAddress($event)"> Same as Current Address
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Addesss Div End -->
+
+      <!-- School Div Start -->
+      <div class="col-lg-12">
+        <div formGroupName="school" class="form-group">
+          <label class="required">Academic Record at Chandernagore Banga Vidyalaya</label>
+          <div class="row">
+            <div class="col-md-5 col-ld-6 col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 col-md-6 form-group">
+                  <label class="required" for="jy">Joining Year</label>
+                  <input type="number" id="jy" placeholder="yyyy" class="form-control" formControlName="joiningYear">
+                </div>
+                <div class="col-sm-6 col-md-6 form-group">
+                  <label class="required" for="py">Passing Year</label>
+                  <input type="number" id="py" placeholder="yyyy" class="form-control" formControlName="passingYear">
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-7 col-ld-6 col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 col-md-7 col-lg-6 form-group">
+                  <label class="required" for="deg">Degree Obtained (Highest)</label>
+                  <select id="deg" class="form-control" formControlName="degree" (change)="onChangeDegree($event)">
+                    <option *ngFor='let degreeItem of degreeList' [value]="degreeItem">{{degreeItem}}</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-6 form-group">
+                  <label for="dept">Department</label>
+                  <select class="form-control" formControlName="department" id="dept">
+                    <option *ngFor='let departmentItem of departmentList' [value]="departmentItem">{{departmentItem}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- School Div End -->
+
+      <!-- Proffesion Record Div Start -->
+
+      <div class="col-lg-12">
+        <div formGroupName="proffesion" class="form-group">
+          <label for="occ">Proffesional Record </label>
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+              <label class="required" for="occ">Occupation</label>
+              <select id="occ" class="form-control" formControlName="occupation">
+                <option *ngFor='let occupationItem of occupationList' [value]="occupationItem">{{occupationItem}}</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <label for="role">Role</label>
+              <input type="text" id="role" placeholder="Job Profile" class="form-control" formControlName="profile">
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <label for="desc">Description(Optional)</label>
+              <textarea type="text" id="desc" placeholder="Say something about your occupation" rows="1" class="form-control" formControlName="description"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proffesion Record Div End -->
+
+      <!-- Upload Div Start -->
+
+      <div class="col-lg-12">
+        <div class="row form-group " formGroupName="attachments">
+          <div class="col-lg-6 col-sm-12">
+            <label for="pic">Upload Picture</label>
+            <label class="input-group">
+              <div class="input-group-prepend">
+                <span class=" btn btn-info " id="basic-addon2"> Choose File&hellip;
+                  <input type="file" class=" form-control" accept="application/jpg"  id="pic" (change)="uploadFle($event,'picture')"
+                    #filetype style="display:none">
+                </span>
+              </div>
+              <input type="text" class="form-control" formControlName="picture" readonly placeholder="Browse Your Picture Here..." >
+            </label>
+          </div>
+          <div class="col-lg-6 col-sm-12 form-group">
+            <label class="required" for="doc">Upload Degree Certificate or Similar Document</label>
+            <label class="input-group">
+              <div class="input-group-prepend">
+                <span class=" btn btn-info " id="basic-addon2"> Choose File&hellip;
+                  <input type="file" class=" form-control" accept="application/pdf"  id="doc" (change)="uploadFle($event,'document')"
+                    #filetype style="display:none">
+                </span>
+              </div>
+              <input type="text" class="form-control" formControlName="document" readonly placeholder="Browse Your Document Here..." >
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- Upload Div end -->
+
+ 
+
+      <div class="col-lg-12">
+        <div class="pull-left">
+          <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Submit</button>
+        </div>
+        <div class="pull-right">
+          <button type="reset" class="btn btn-default">Reset</button>
+        </div>
+      </div>
+
     </div>
-  </div>
+  </form>
 </div>
