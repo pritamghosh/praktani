@@ -64,17 +64,12 @@ export class ContactComponent implements OnInit {
     return null;
   }
 
-  fileChange(event:any){
-    let file = event.target.files[0]; // <--- File Object for future use.
-    this.contactForm.controls['attachment'].setValue(file ? file : '');
-    this.attachment=event.target.files[0];
-    var fileReader = new FileReader();
-    fileReader.readAsDataURL(event.target.files[0]);
-     fileReader.onload = function(e) {
-		 //	console.log(fileReader.result);
-			
-
-		 }
+  uploadFile(event:any){
+    if (event.target.files[0] != null) {
+      this.contactForm.get('attachment').setValue(event.target.files[0].name);
+    } else {
+      this.contactForm.get('attachment').setValue(null);
+    }
     
   }
   onSubmit(){

@@ -1,5 +1,7 @@
-export class Event {
+import { SafeResourceUrl } from "@angular/platform-browser";
 
+export class Event {
+    url: SafeResourceUrl;
     isFutureEvent=false;
     constructor(
         public id:number,

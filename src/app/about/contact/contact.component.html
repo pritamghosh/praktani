@@ -58,8 +58,16 @@
                 <textarea class="form-control" id="exampleTextarea" formControlName="message" placeholder="Write your message here... " rows="3"></textarea>
               </div>
               <div class="form-group">
-                <input type="file" class="form-control-file" (change)="fileChange($event)"  id="uploadFile" aria-describedby="fileHelp" placeholder="Add attachment here...">
-                <small id="fileHelp" class="form-text text-muted"></small>
+                  <label for="uploadFile">Upload Attachment</label>
+                  <label class="input-group">
+                      <div class="input-group-prepend">
+                        <span class=" btn btn-info " id="basic-addon2"> Choose File&hellip;
+                          <input type="file" class=" form-control"  id="uploadFile" (change)="uploadFile($event)"
+                            #filetype style="display:none">
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" formControlName="attachment" readonly placeholder="Browse Your Attachment Here..." >
+                    </label>
               </div>
               <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Send Message</button>
             </form>

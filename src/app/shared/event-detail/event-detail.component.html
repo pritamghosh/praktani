@@ -46,7 +46,7 @@
             <h1>Location:</h1>
             <a>{{event.venue}}</a>
             <p>
-              <iframe frameborder="1" style="border:0" src="{{event.venueLink}}"
+              <iframe frameborder="1" style="border:0" [src]="event.url"
                 allowfullscreen></iframe>
             </p>
           </div>

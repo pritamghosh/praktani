@@ -69,7 +69,7 @@ export class RegistrationComponent implements OnInit {
 
   }
 
-  uploadFle(event: any, formControlName: string) {
+  uploadFile(event: any, formControlName: string) {
     if (event.target.files[0] != null) {
       this.registrationForm.get('attachments').get(formControlName).setValue(event.target.files[0].name);
     } else {
@@ -79,6 +79,12 @@ export class RegistrationComponent implements OnInit {
 
   onReset(){
     this.registrationForm.reset();
+  }
+
+  onSubmit(){
+    console.log('submit');
+    window.print();
+    
   }
 
   uploadDocument(event: any) {

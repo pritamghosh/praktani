@@ -1,5 +1,5 @@
 <app-title [title]="'Become A Member'"></app-title>
-<div class="container registrationForm">
+<div class="container registrationForm" id="registrationForm">
 
   <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="row">
@@ -141,7 +141,7 @@
           <div class="row">
             <div class="col-lg-12">
               <label for="sameAs">
-                <input type="checkbox" id="sameAs" formControlName="sameAsPermanent" (change)="isSameAsPermAddress($event)"> Same as Current Address
+                <input type="checkbox" id="sameAs" formControlName="sameAsPermanent" (change)="isSameAsPermAddress($event)"> Same as Pemanent Address
               </label>
             </div>
           </div>
@@ -224,7 +224,7 @@
             <label class="input-group">
               <div class="input-group-prepend">
                 <span class=" btn btn-info " id="basic-addon2"> Choose File&hellip;
-                  <input type="file" class=" form-control" accept="application/jpg"  id="pic" (change)="uploadFle($event,'picture')"
+                  <input type="file" class=" form-control" accept="application/jpg"  id="pic" (change)="uploadFile($event,'picture')"
                     #filetype style="display:none">
                 </span>
               </div>
@@ -236,7 +236,7 @@
             <label class="input-group">
               <div class="input-group-prepend">
                 <span class=" btn btn-info " id="basic-addon2"> Choose File&hellip;
-                  <input type="file" class=" form-control" accept="application/pdf"  id="doc" (change)="uploadFle($event,'document')"
+                  <input type="file" class=" form-control" accept="application/pdf"  id="doc" (change)="uploadFile($event,'document')"
                     #filetype style="display:none">
                 </span>
               </div>
@@ -254,7 +254,7 @@
           <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Submit</button>
         </div>
         <div class="pull-right">
-          <button type="reset" class="btn btn-default" (click)="onReset()">Reset</button>
+          <button type="reset" class="btn" (click)="onReset()">Reset</button>
         </div>
       </div>
 
