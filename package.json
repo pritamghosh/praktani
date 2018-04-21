@@ -36,7 +36,8 @@
     "ngx-image-gallery": "^1.3.1",
     "popper.js": "^1.14.3",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "@angular/cli": "~1.7.3",
   },
   "devDependencies": {
     "@angular/cli": "~1.7.3",
