@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"title": "Picnic on February18,2018",
+		"source": "/assets/images/event/event1.jpg"
+	},
+	{
+		"id": 2,
+		"title": "Reunion on August 18,2018",
+		"source": "/assets/images/event/event3.jpg"
+	},
+	{
+		"id":3,
+		"title": "Annual Function on September 18,2018",
+		"source": "/assets/images/event/event2.jpg"
+	},
+	{
+		"id": 4,
+		"title": "AGM on September 08,2018",
+		"source": "/assets/images/event/event1.jpg"
+	},
+	{
+		"id": 5,
+		"title": "Assimilation on November 12,2018",
+		"source": "/assets/images/event/event5.jpg"
+	},
+	{
+		"id": 6,
+		"title": "Outing on September 28,2018",
+		"source": "/assets/images/event/event6.jpg"
+	}
+]

@@ -1,0 +1,9 @@
+<app-title [title]="'Event'"></app-title>
+<div class="container">
+    <div class="row" >
+        <div class="col-md-4 col-sm-6 col-xs-12 " id="event" *ngFor="let event of events">
+            <app-event-card [event]="event"></app-event-card>
+        </div>
+        
+    </div>
+</div>

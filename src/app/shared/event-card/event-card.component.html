@@ -2,17 +2,12 @@
   <div class="card-container">
     <a>
       <img [src]="event.thumbImgPath" alt=" {{ event.title}} " >
-      <a class="prev" (click)="nextSlide(-1)" #left (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isLeftHidden>&#10094;</a>
-      <a class="next" (click)="nextSlide(1)" #right (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isRightHidden>&#10095;</a>
+      <a class="prev" (click)="nextSlide(false)" #left (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isLeftHidden>&#10094;</a>
+      <a class="next" (click)="nextSlide(true)" #right (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isRightHidden>&#10095;</a>
     </a>
   </div>
   <div class="detail">
     <div class="evt-info">
-      <!-- <div class="evt-date-col">
-        <p class="evt-month">APR</p>
-        <p class="evt-date">21</p>
-        <p class="evt-day">SAT</p>
-      </div> -->
       <div class="evt-info-col">
         <a id="title">
           <strong>{{ event.title}}</strong>

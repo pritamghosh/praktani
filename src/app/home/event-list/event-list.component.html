@@ -1,7 +1,7 @@
 <div class="event-container">
   <div class="row">
     <div class="col-xs-6">
-      <h1>Events</h1>
+      <h1 routerLink="/event" style="cursor:pointer">Events</h1>
 
     </div>
     <div class="col-xs-6">
@@ -9,24 +9,17 @@
     </div>
   </div>
   <hr/>
-  <div class="row" (nextSlideEvent)="nextSlide($event)">
-    <!-- <div class="arrow">
-      <i class="fa fa-angle-left pull-left" (click)="changeEvent(false)"></i>
-    </div> -->
-    <div class="col-md-4 col-sm-6 col-xs-12" (nextSlideEvent)="nextSlide($event)">
-      <app-event-card [event]="event1" [isLeftHidden]="false" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <app-event-card [event]="event1" [slideNo]="1" (nextSlideEvent)="nextSlide($event)" [isLeftHidden]="false" (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()"></app-event-card>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <app-event-card [event]="event2" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
+      <app-event-card [event]="event2" [slideNo]="2" (nextSlideEvent)="nextSlide($event)" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
     </div>
-    <!-- <div class="col-md-4 col-sm-6 col-xs-12">
-      <app-event-card [event]="event1" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
-    </div> -->
-    <div class="col-md-4 col-sm-6 col-xs-12" (nextSlideEvent)="nextSlide($event)">
-      <app-event-card [event]="event2" [isRightHidden]="false" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"></app-event-card>
+    <div class="col-md-4 col-sm-6 col-xs-12" id="last-column">
+      <app-event-card [event]="event3" [slideNo]="3" (nextSlideEvent)="nextSlide($event)" [isRightHidden]="false" (mouseenter)="onMouseEnter()"
+        (mouseleave)="onMouseLeave()"></app-event-card>
     </div>
-    <!-- <div class="arrow">
-        <i class="fa fa-angle-right pull-left" style="font-size:60px;color:lightgray;" (click)="changeEvent(true)"></i>
-    </div> -->
   </div>
 </div>

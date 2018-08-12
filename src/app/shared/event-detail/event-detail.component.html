@@ -1,9 +1,9 @@
-<div class="event-banner">
+<div class="event-banner" *ngIf="event!=null">
   <a>
     <img [src]="event.bannerImgPath" alt="{{event.title}}">
   </a>
 </div>
-<div class="container">
+<div class="container" *ngIf="event!=null">
   <div class="content">
 
     <div class="row">
@@ -36,24 +36,24 @@
         <div class="side-pane">
           <div class="date-time">
             <h1>Date And Time:</h1>
-            <a>{{event.date | date:'EEE , MMM dd, yyyy, HH:mm aa'}}</a>
+            <a>{{event.startDate | date:'EEE , MMM dd, yyyy, HH:mm aa'}}</a>
             <div>
-              <button class="btn btn-sm">
-                <i class="fa fa-calendar-plus-o "></i> Add to Calender</button>
+              <button class="btn btn-sm" (click)="addToCalender()">
+                <i class="fa fa-calendar-plus-o "></i>Add to Calender</button>
             </div>
           </div>
           <div class="location">
             <h1>Location:</h1>
             <a>{{event.venue}}</a>
             <p>
-              <iframe frameborder="1" style="border:0" [src]="event.url"
+              <iframe frameborder="1" style="border:0" [src]="eventUrl"
                 allowfullscreen></iframe>
             </p>
           </div>
           <div class="share">
               <h1>Share with friends:</h1>
               <div class="social-links">
-                  <a href="fb-messenger://share/?link= https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fsharing%2Freference%2Fsend-dialog&app_id=233608283854580" class="fa fa-facebook"></a>
+                  <a  href="https://developers.facebook.com/docs/sharing/reference/share-dialog" class="fa fa-facebook"></a>
                   <a href="#" class="fa fa-twitter"></a>
                   <a href="#" class="fa fa-google-plus"></a>
                   <a href="#" class="fa fa-email"></a>

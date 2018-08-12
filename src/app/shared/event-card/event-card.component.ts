@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Event } from '../../../models/event.model';
+import { Event } from '../../models/event.model';
 
 @Component({
   selector: 'app-event-card',
@@ -9,23 +9,24 @@ import { Event } from '../../../models/event.model';
 })
 export class EventCardComponent implements OnInit {
   @Input() event: Event
-
+  @Input() slideNo: number
   @Input() isLeftHidden = true;
   @Input() isRightHidden = true;
-  @Output() nextSlideEvent = new EventEmitter<number>();
+  @Output() nextSlideEvent = new EventEmitter<any>();
   mouseOvered = false;
   constructor(private router: Router) { }
 
-  nextSlide(index: number) {
-    console.log(index);
-    this.nextSlideEvent.emit(index);
+  nextSlide(isFwd: boolean) {
+    console.log(window.screen.height);
+    console.log(this.slideNo);
+    this.nextSlideEvent.emit(isFwd);
   }
   ngOnInit() {
   }
 
   onEventClick() {
     if (!this.mouseOvered) {
-      this.router.navigate(['event/1']);
+      this.router.navigate(['event/'+this.event.id]);
     }
   }
 }

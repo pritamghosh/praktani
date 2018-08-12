@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { News } from '../../models/news.model';
+import { HttpResponse } from 'selenium-webdriver/http';
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-news-list',
@@ -7,19 +9,15 @@ import { News } from '../../models/news.model';
   styleUrls: ['./news-list.component.scss']
 })
 export class NewsListComponent implements OnInit {
-  newsList:News[]=[];
-  constructor() { }
-
+  newsList: News[] = [];
+  constructor(private httpService: Http) { }
+  t
   ngOnInit() {
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','/assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','/assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','/assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','/assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','assets/images/event/event1.jpg'));
-    this.newsList.push(new News(1,'Picnic  on February 18, 2018','assets/images/event/event1.jpg'));
+    this.httpService.get('/assets/files/news-list.json').subscribe(
+      (data: Response) => {
+        this.newsList = data.json()
+      }
+    );
   }
 
 }

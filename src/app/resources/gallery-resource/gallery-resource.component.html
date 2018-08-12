@@ -1,0 +1,9 @@
+<app-title [title]="'Gallery'"></app-title>
+<div class="container">
+    <div class="row" >
+        <div class="col-md-4 col-sm-6 col-xs-12" id="thumbnail" *ngFor="let thumbnail of thumbnails">
+            <app-thumbnail-card [thumbnail]="thumbnail"></app-thumbnail-card>
+        </div>
+        
+    </div>
+</div>

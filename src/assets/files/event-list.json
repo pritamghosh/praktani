@@ -1,0 +1,72 @@
+[{
+	"id": 1,
+	"thumbImgPath": "assets/images/event/event1.jpg",
+	"bannerImgPath": "assets/images/event/eventd1.jpg",
+	"startDate": "2018-03-31T18:30:00.000Z",
+	"endDate": "2018-03-31T18:30:00.000Z",
+	"title": "Event 1",
+	"venue": "Manpho Convention Centre: Bengaluru",
+	"venueAddress": "91/4, Manyata Tech Park Road, DadaMastan Layout, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560024",
+	"venueLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8769413581035!2d77.61503951437365!3d13.043504116826618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1771996273cd%3A0x39229715dbfb1d2d!2sManpho!5e0!3m2!1sen!2sin!4v1534063045939",
+	"isFutureEvent": false
+},
+{
+	"id": 2,
+	"thumbImgPath": "assets/images/event/event2.jpg",
+	"bannerImgPath": "assets/images/event/eventd2.jpg",
+	"startDate": "2018-05-12T18:30:00.000Z",
+	"endDate": "2018-05-12T18:30:00.000Z",
+	"title": "Event 2",
+	"venue": "Rabindra Bhavan : Chandernagore",
+	"venueAddress": "Rabindra Bhavan - Chandannagar, Barabazar, Chandannagar, West Bengal 712136, India",
+	"venueLink": "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3676.49143591924!2d88.36770811450407!3d22.858297628184747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x39f8910456acf77b%3A0xf4d5cd5e4f4ac521!2sRabindra+Bhavan+-+Chandannagar%2C+Barabazar%2C+Chandannagar%2C+West+Bengal+712136!3m2!1d22.8582927!2d88.36989679999999!5e0!3m2!1sen!2sin!4v1534018054674",
+	"isFutureEvent": false
+},
+{
+	"id": 3,
+	"thumbImgPath": "assets/images/event/event3.jpg",
+	"bannerImgPath": "assets/images/event/eventd3.jpg",
+	"startDate": "2018-07-18T18:30:00.000Z",
+	"endDate": "2018-07-12T18:30:00.000Z",
+	"title": "Event 3",
+	"venue": "Nazrulmancha : Kolkata",
+	"venueAddress": "Nazrul Mancha, Southern Avenue, Dhakuria, Southern Park, Kolkata, West Bengal",
+	"venueLink": "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3685.742938925973!2d88.36009631449802!3d22.51382594080025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x3a0270d58047143b%3A0x1686e4abf899b993!2sNazrul+Mancha%2C+Southern+Ave%2C+Dhakuria%2C+Southern+Park%2C+Kolkata%2C+West+Bengal+700029!3m2!1d22.513821!2d88.362285!5e0!3m2!1sen!2sin!4v1534062678684",
+	"isFutureEvent": false
+},
+{
+	"id": 4,
+	"thumbImgPath": "assets/images/event/event4.jpg",
+	"bannerImgPath": "assets/images/event/eventd4.jpg",
+	"startDate": "2019-01-15T18:30:00.000Z",
+	"endDate": "2019-02-15T18:30:00.000Z",
+	"title": "Event 4",
+	"venue": "Chandernagore Banga Vidyalaya: Chandernagore",
+	"venueAddress": "Chandannagar Banga Vidyalaya, Tematha, Bhadreswar, Chandannagar, West Bengal",
+	"venueLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.8554346290534!2d88.36052361450385!3d22.844837428680982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f890ff589b0f03%3A0x7b60c31ec256aeaa!2sChandannagar+Banga+Vidyalaya!5e0!3m2!1sen!2sin!4v1534062927335",
+	"isFutureEvent": false
+},
+{
+	"id": 5,
+	"thumbImgPath": "assets/images/event/event5.jpg",
+	"bannerImgPath": "assets/images/event/eventd4.jpg",
+	"startDate": "2019-01-15T18:30:00.000Z",
+	"endDate": "2019-01-15T18:30:00.000Z",
+	"title": "Event 5",
+	"venue": "Nazrulmancha: Chandernagore",
+	"venueAddress": "Nazrul Mancha, Southern Avenue, Dhakuria, Southern Park, Kolkata, West Bengal",
+	"venueLink": "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3685.742938925973!2d88.36009631449802!3d22.51382594080025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x3a0270d58047143b%3A0x1686e4abf899b993!2sNazrul+Mancha%2C+Southern+Ave%2C+Dhakuria%2C+Southern+Park%2C+Kolkata%2C+West+Bengal+700029!3m2!1d22.513821!2d88.362285!5e0!3m2!1sen!2sin!4v1534062678684",
+	"isFutureEvent": false
+},
+{
+	"id": 6,
+	"thumbImgPath": "assets/images/event/event6.jpg",
+	"bannerImgPath": "assets/images/event/eventd4.jpg",
+	"startDate": "2019-01-15T18:30:00.000Z",
+	"endDate": "2019-01-15T18:30:00.000Z",
+	"title": "Event 6",
+	"venue": "Rabindra Bhavan: Chandernagore",
+	"venueAddress": "Rabindra Bhavan - Chandannagar, Barabazar, Chandannagar, West Bengal 712136, India",
+	"venueLink": "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3676.49143591924!2d88.36770811450407!3d22.858297628184747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x39f8910456acf77b%3A0xf4d5cd5e4f4ac521!2sRabindra+Bhavan+-+Chandannagar%2C+Barabazar%2C+Chandannagar%2C+West+Bengal+712136!3m2!1d22.8582927!2d88.36989679999999!5e0!3m2!1sen!2sin!4v1534018054674",
+	"isFutureEvent": false
+}]

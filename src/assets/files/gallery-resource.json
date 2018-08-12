@@ -1,0 +1,168 @@
+[{
+	"title": "thumb1",
+	"images": [{
+		"imgPath": "assets/images/gallery/thumb1/bridge.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb1/bridge.jpg",
+		"name": "smily 1",
+		"despription": " caption 1",
+		"height": 100,
+		"width": 100,
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb1/coast.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb1/coast.jpg",
+		"name": "smily 2",
+		"despription": " caption 2",
+		"height": 100,
+		"width": 100,
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb1/park.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb1/park.jpg",
+		"name": "smily 2",
+		"despription": " caption 3",
+		"height": 100,
+		"width": 100,
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb1/benches.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb1/benches.jpg",
+		"name": "smily 2",
+		"despription": " caption 4",
+		"height": 100,
+		"width": 100,
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	}],
+	"description": "Description"
+},
+{
+	"title": "thumb2",
+	"images": [{
+		"imgPath": "assets/images/gallery/thumb3/coast.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb2/coast.jpg",
+		"name": "smily 2",
+		"despription": " caption 2",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb3/bridge.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb2/bridge.jpg",
+		"name": "smily 1",
+		"despription": " caption 1",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb3/tunnel.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb2/tunnel.jpg",
+		"name": "smily 4",
+		"despription": " caption 4",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb3/rocks.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb2/rocks.jpg",
+		"name": "smily 3",
+		"despription": " caption 3",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	}],
+	"description": "Description"
+},
+{
+	"title": "thumb3",
+	"images": [{
+		"imgPath": "assets/images/gallery/thumb4/park.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb4/park.jpg",
+		"name": "smily 3",
+		"despription": " caption 3",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb4/benches.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb4/benches.jpg",
+		"name": "smily 1",
+		"despription": " caption 1",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb4/rails.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb4/rails.jpg",
+		"name": "smily 4",
+		"despription": " caption 4",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb4/coast.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb4/coast.jpg",
+		"name": "smily 2",
+		"despription": " caption 2",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	}],
+	"description": "Description"
+},
+{
+	"title": "thumb4",
+	"images": [{
+		"imgPath": "assets/images/gallery/thumb5/tunnel.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb5/tunnel.jpg",
+		"name": "smily 3",
+		"despription": " caption 3",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb5/rocks.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb5/rocks.jpg",
+		"name": "smily 2",
+		"despription": " caption 2",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb5/bridge.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb5/bridge.jpg",
+		"name": "smily 1",
+		"despription": " caption 1",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	},
+	{
+		"imgPath": "assets/images/gallery/thumb5/rails.jpg",
+		"thumbImgPath": "assets/images/gallery/thumb5/rails.jpg",
+		"name": "smily 4",
+		"despription": " caption 4",
+		"active": false,
+		"viewerImageLoaded": false,
+		"transition": "enterFromLeft"
+	}],
+	"description": "Description"
+}]

@@ -1,6 +1,6 @@
-<div class="thumb-card">
-  <div class="card-container">
-    <a>
+<div class="thumb-card" (click)="onClick()">
+  <div class="card-container" >
+    <a (mouseenter)="isMouseEntered=true" (mouseleave)="isMouseEntered=false" >
       <img [src]="thumbImgPath" alt=" {{ thumbnail.title}} " >
       <!-- <a class="prev" (click)="nextSlide(-1)" #left (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isLeftHidden>&#10094;</a>
       <a class="next" (click)="nextSlide(1)" #right (mouseenter)="mouseOvered=true" (mouseleave)="mouseOvered=false" [hidden]=isRightHidden>&#10095;</a> -->
