@@ -22,9 +22,7 @@ export class EventDetailComponent implements OnInit {
     private httpService: Http,
     private route: ActivatedRoute
   ) {
-    console.log("1");
-    
-    this.route.params.subscribe(params => {
+   this.route.params.subscribe(params => {
       this.id = params['id']
       if (this._eventService.events.length==0) {
         this.httpService.get('/assets/files/event-list.json').subscribe(
@@ -37,15 +35,15 @@ export class EventDetailComponent implements OnInit {
         this.fetchEvent();
       }
     });
-    console.log( this.id );
     
     
 
   }
   fetchEvent() {
-    if (this._eventService.events[this.id] != null && this._eventService.events[this.id-1].id == this.id) {
-      this.event = this._eventService.events[this.id];
+    if (this._eventService.events[this.id-1] != null && this._eventService.events[this.id-1].id == this.id) {
+      this.event = this._eventService.events[this.id-1];
       this.eventUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this.event.venueLink);
+      
     }
     else {
       let isFound = false;console.log( this._eventService)

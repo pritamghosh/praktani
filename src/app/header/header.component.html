@@ -3,13 +3,12 @@
 		<a routerLink="/" class="navbar-brand">প্রাক্তনী</a>
 
 	</div>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
-	 aria-expanded="false" aria-label="Toggle navigation">
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+	 aria-expanded="false" aria-label="Toggle navigation" #toggler>
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarToggler">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
 			<li class="nav-item dropdown ">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">
 					About
@@ -38,15 +37,13 @@
 					<li class="divider dropdown-divider"></li>
 					<a class="dropdown-item" routerLink="membership/cm">Call for Membership</a>
 				</ul>
-
-			</li>
-
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" routerLink="/gallery">Gallery</a>
 			</li>
 			<li class="nav-item" routerLinkActive="active">
-					<a class="nav-link" routerLink="/event">Events</a>
-				</li>
+				<a class="nav-link" routerLink="/gallery" >Gallery</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" routerLink="/events" >Events</a>
+			</li>
 			<li class="nav-item" routerLinkActive="active">
 				<a class="nav-link" routerLink="/#">Reunion</a>
 			</li>
@@ -65,12 +62,11 @@
 			</div>
 		</form>
 		<ul class="navbar-nav mr-left mt-2 mt-lg-0">
-			
 			<li class="nav-item dropdown " [class.active]="isLoggedIn">
 				<a class="nav-link dropdown-toggle" data-toggle="dropdown">
 					<i class="fa fa-user-circle" style="font-size:36px"></i>
 				</a>
-				<ul class="dropdown-menu dropdown-menu-right"  role="menu">
+				<ul class="dropdown-menu dropdown-menu-right" role="menu">
 					<a class="dropdown-item" routerLink="#" [hidden]="!isLoggedIn">Profile</a>
 					<li class="divider dropdown-divider" [hidden]="!isLoggedIn"></li>
 					<a class="dropdown-item" [hidden]="!isLoggedIn">Sign Out</a>

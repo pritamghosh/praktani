@@ -52,6 +52,7 @@ import { ExecutiveCouncilComponent } from './about/executive-council/executive-c
 import { HttpModule } from '@angular/http';
 import { FileService } from './services/file.service';
 import { EventService } from './services/event.service';
+import { TogglerService } from './services/toggler.service';
 
 export const ROUTES: Routes = [
   {
@@ -72,7 +73,7 @@ export const ROUTES: Routes = [
   { path: 'membership/ma', component: ApplicationComponent },
   { path: 'membership/cm', component: CallMembershipComponent },
   { path: 'gallery', component: GalleryResourceComponent},
-  { path: 'event', component: EventResourceComponent},
+  { path: 'events', component: EventResourceComponent},
   { path: 'event/:id', component: EventDetailComponent},
   { path: 'register', component: RegistrationComponent},
   { path: 'rules-regulations', component: RulesAndRegulationsComponent},
@@ -137,6 +138,7 @@ export const ROUTES: Routes = [
     ImageService,
     FileService,
     EventService,
+    TogglerService,
     DatePipe],
   bootstrap: [AppComponent],
 })
